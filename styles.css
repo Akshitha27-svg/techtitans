@@ -1,0 +1,576 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff9900;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ff9900;
+}
+
+.btn-cta {
+  background-color: #ff9900;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-cta:hover {
+  background-color: #ffa733;
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-background.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 50px;
+  position: relative;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  z-index: 2;
+  position: relative;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.btn-primary {
+  padding: 12px 30px;
+  background-color: #ff9900;
+  color: #000;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ffa733;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+.features-section {
+  background-color: #f9f9f9;
+  padding: 80px 30px;
+  color: #111;
+  text-align: center;
+}
+
+.features-section .section-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.features-section .section-title span {
+  color: #ff9900;
+}
+
+.features-section .section-subtitle {
+  font-size: 18px;
+  margin-bottom: 40px;
+  max-width: 750px;
+  margin-inline: auto;
+  color: #555;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.feature-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-box img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 15px;
+  color: #555;
+}
+.feature-box i {
+  font-size: 48px;
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+.feature-section {
+  background: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.section-description {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background: #1c1c1c;
+  border-radius: 16px;
+  padding: 30px 20px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  background: #222;
+}
+
+.feature-box i {
+  font-size: 48px;
+  color: #ff9900;
+  margin-bottom: 20px;
+}
+
+.feature-box h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.feature-box p {
+  font-size: 15px;
+  color: #aaa;
+  line-height: 1.6;
+}<style>
+  .feature-grid-section {
+    padding: 60px 20px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .feature-item {
+    background-color: #1c1c1c;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .feature-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-item i {
+    font-size: 36px;
+    color: #00d0ff;
+    margin-bottom: 15px;
+  }
+
+  .feature-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .feature-item p {
+    font-size: 14px;
+    color: #ccc;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+/* SCAN SECTION */
+.scan-section {
+  background: #0f1c2e;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.scan-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scan-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.scan-info h2 {
+  font-size: 2rem;
+  margin: 20px 0 10px;
+}
+
+.scan-info p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.icon-box {
+  background: #1a2c4a;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.scan-form {
+  flex: 1;
+  background: #1e2d47;
+  padding: 30px;
+  border-radius: 15px;
+  min-width: 300px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.form-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.form-tabs button {
+  flex: 1;
+  background: #2c3e5e;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+}
+
+.form-tabs button.active-tab {
+  background: #fcd200;
+  color: #000;
+  font-weight: bold;
+}
+
+.scan-input-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group select,
+.input-group input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  max-width: 180px;
+}
+
+.input-group input {
+  flex: 1;
+  background: #f9f9f9;
+  color: #000;
+}
+
+.checkbox-group {
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: #bbb;
+}
+
+.btn-scan {
+  background: #fcd200;
+  color: #000;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FUZZ | Secure Open Source Software</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Font Awesome CDN in the <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<section class="feature-section">
+  <div class="container">
+    <h2 class="section-title">Explore the FUZZ Project Journey</h2>
+    <p class="section-description">Dive into our open source fuzzing process — from understanding the project to trying it yourself.</p>
+
+    <div class="features-grid">
+      <!-- 1️⃣ Understand the Project -->
+      <div class="feature-box">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Understand the Project</h3>
+        <p>Get an overview of Sumatra PDF and why we chose it for fuzzing. Learn the basics of fuzzing and our project goal.</p>
+      </div>
+
+      <!-- 2️⃣ Explore the Fuzzing Process -->
+      <div class="feature-box">
+        <i class="fas fa-cogs"></i>
+        <h3>Explore the Fuzzing Process</h3>
+        <p>Discover how we identified target functions, built a harness, and fuzzed the application. See the entire workflow visually.</p>
+      </div>
+
+      <!-- 3️⃣ View the Harness Code -->
+      <div class="feature-box">
+        <i class="fas fa-code"></i>
+        <h3>View the Harness Code</h3>
+        <p>Check out the actual code we used to trigger the target functions. Download or explore code snippets with explanations.</p>
+      </div>
+
+      <!-- 4️⃣ Watch Fuzzing in Action -->
+      <div class="feature-box">
+        <i class="fas fa-play-circle"></i>
+        <h3>Watch Fuzzing in Action</h3>
+        <p>See a demo of fuzzing generating inputs and crashing the software. Understand how crashes are captured and logged.</p>
+      </div>
+
+      <!-- 5️⃣ Analyze the Results -->
+      <div class="feature-box">
+        <i class="fas fa-chart-line"></i>
+        <h3>Analyze the Results</h3>
+        <p>Explore real crash cases and their root causes. View crash logs and sample inputs that triggered the issues.</p>
+      </div>
+
+      <!-- 6️⃣ Download and Try Yourself -->
+      <div class="feature-box">
+        <i class="fas fa-download"></i>
+        <h3>Download and Try Yourself</h3>
+        <p>Get the full project files, harness code, and sample test data. Follow a quick guide to try fuzzing on your own.</p>
+      </div>
+
+      <!-- 7️⃣ Secure Open Source -->
+      <div class="feature-box">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Secure Open Source</h3>
+        <p>Learn how fuzzing helps improve the quality and security of open source projects used globally.</p>
+      </div>
+
+      <!-- 8️⃣ Join the Community -->
+      <div class="feature-box">
+        <i class="fas fa-users"></i>
+        <h3>Join the Community</h3>
+        <p>Connect with developers, security researchers, and contributors — be part of the fuzzing ecosystem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SCAN SECTION (Inspired by URL Fuzzer Page) -->
+<section class="scan-section">
+  <div class="container scan-container">
+    <!-- Left Text Area -->
+    <div class="scan-info">
+      <div class="icon-box">
+        <i class="fas fa-search fa-3x"></i>
+      </div>
+      <h2>URL Fuzzer</h2>
+      <p>Discover hidden, sensitive or vulnerable files and routes in web applications and servers.</p>
+      <p>Try the light version of our scanner or sign up for advanced scans to uncover critical risks.</p>
+    </div>
+
+    <!-- Right Scan Form -->
+    <div class="scan-form">
+      <div class="form-tabs">
+        <button class="active-tab">Light scan</button>
+        <button>Deep scan</button>
+      </div>
+
+      <form class="scan-input-form">
+        <label for="url-input">Target</label>
+        <div class="input-group">
+          <select>
+            <option>HTTPS</option>
+            <option>HTTP</option>
+          </select>
+          <input type="text" id="url-input" placeholder="www.example.com" />
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="auth-checkbox" />
+          <label for="auth-checkbox">I am authorized to scan this target and agree with the Terms of Service.</label>
+        </div>
+        <button class="btn-scan">Start Scan</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="navbar">
+      <div class="logo">FUZZ</div>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn-cta">Try FUZZ Free</a>
+    </div>
+
+    <div class="hero-content">
+      <h1>Level Up Open Source Security</h1>
+      <p>Power your software with advanced fuzzing technology and secure your code from day one.</p>
+      <a href="#features" class="btn-primary">Explore Features</a>
+    </div>
+  </header>
+
+</body>
+</html>
