@@ -1,0 +1,14 @@
+{
+  "name": "fuzzer-script",
+  "version": "1.0.0",
+  "description": "A simple fuzzing script for simulating Sumatra PDF parser crashes",
+  "main": "fuzzer.js",
+  "scripts": {
+    "start": "nodemon fuzzer.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
